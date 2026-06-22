@@ -1,4 +1,6 @@
 "use client";
+
+import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -86,8 +88,13 @@ export default function DataSidebar({ collapsed, onToggle }: DataSidebarProps) {
     >
       {/* Logo */}
       <div className="flex items-center gap-2.5 px-4 h-14 border-b border-sidebar-border">
-        <div className="w-7 h-7 rounded-lg bg-black flex items-center justify-center flex-shrink-0">
-          <Database className="w-3.5 h-3.5 text-white" />
+        <div className="relative w-7 h-7 flex-shrink-0">
+          <Image 
+            src="/brand/6data_main_logo_transparent.png" 
+            alt="6Data Logo" 
+            fill 
+            className="object-contain dark:invert"
+          />
         </div>
         {!collapsed && (
           <span className="text-sm font-black text-sidebar-foreground tracking-tight">6Data</span>

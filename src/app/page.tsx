@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Box, Code2, Database, Wand2 } from "lucide-react";
 
@@ -9,8 +10,13 @@ export default function LandingPage() {
       {/* Navbar */}
       <nav className="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-xl bg-black flex items-center justify-center shadow-md">
-            <Database className="w-4 h-4 text-white" />
+          <div className="relative w-8 h-8 flex-shrink-0">
+            <Image 
+              src="/brand/6data_main_logo_transparent.png" 
+              alt="6Data Logo" 
+              fill 
+              className="object-contain dark:invert"
+            />
           </div>
           <span className="font-bold text-lg tracking-tight">6Data</span>
         </div>
@@ -66,10 +72,14 @@ export default function LandingPage() {
           className="relative rounded-2xl border border-black/5 bg-black/5 p-2 shadow-2xl shadow-black/10"
         >
           <div className="rounded-xl overflow-hidden bg-white border border-black/10 flex h-[600px] relative">
-            {/* Mockup Sidebar */}
             <div className="w-56 border-r border-black/5 bg-[#fcfcfc] p-4 hidden md:block">
-              <div className="w-6 h-6 bg-black rounded-md mb-6 flex items-center justify-center">
-                 <Database className="w-3 h-3 text-white" />
+              <div className="relative w-6 h-6 mb-6 flex-shrink-0">
+                <Image 
+                  src="/brand/6data_main_logo_transparent.png" 
+                  alt="6Data Logo" 
+                  fill 
+                  className="object-contain dark:invert"
+                />
               </div>
               <div className="space-y-1">
                 <div className="h-8 rounded-md bg-black/5 flex items-center px-2 gap-2">

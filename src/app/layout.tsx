@@ -17,6 +17,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "6Data — Modern Data Workspace",
   description: "A bright, clean, and fast data workspace for creators and startups.",
+  icons: {
+    icon: "/brand/6data_favicon_transparent.png",
+  },
 };
 
 export default function RootLayout({
